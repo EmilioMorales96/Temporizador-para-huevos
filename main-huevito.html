@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Huevos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Temporizador de Huevos 🥚</h1>
+        
+        <div class="navigation">
+            <button id="prev">⬅️</button>
+            <div class="option-display">
+                <img id="option-img" src="Assets/3min.jpg" alt="Imagen de huevo">
+                <p id="option-text">Huevo Pasado (3 min)</p>
+            </div>
+            <button id="next">➡️</button>
+        </div>
+    
+        <div class="timer-display">
+            <h2 id="timer">00:00</h2>
+        </div>
+    
+        <div class="controls">
+            <button id="start">Iniciar Tiempo</button>
+            <button id="stop">Detener Tiempo</button>
+        </div>
+    
+        <div class="alarm-controls hidden" id="alarm-controls">
+            <button id="stop-alarm">Detener Alarma</button>
+            <button id="snooze">Snooze (1 min)</button>
+        </div>
+    
+        <audio id="alarm-sound" src="Assets/chicken_1.mp3"></audio>
+    </div>
+
+    <script src="functions.js"></script>
+</body>
+</html>

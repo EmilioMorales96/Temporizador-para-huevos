@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* imagen de fondo */
+    background-image: url('../Assets/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Fondo semitransparente al contenedor y que el texto sea legible */
+.container {
+    max-width: 500px;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.351)), 
+                url('../Assets/sky.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #fcfcfc;
+    font-weight: 600;
+}
+
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 20px; 
+    
+}
+
+.options button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Altura fija para los botones */
+}
+
+.options button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.options button img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.options button p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: transparent;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilos para el temporizador */
+.timer-display h2 {
+    font-size: 3rem;
+    margin: 30px 0;
+    color: #e8e6e6;
+    font-weight: 700;
+}
+
+/* Estilos para los botones de control */
+.controls button, .alarm-controls button {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 10px;
+}
+
+.controls button:hover, .alarm-controls button:hover {
+    background-color: #e53935;
+}
+
+/* Estilos para los controles de la alarma */
+.alarm-controls {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos para el audio (oculto) */
+audio {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option-display {
+    text-align: center;
+}
+
+.option-display img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.option-display p {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+.navigation button {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.navigation button:hover {
+    background-color: #3e8e41;
+}
+
+/* Animación para el desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.option-display {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.option-display.visible {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Asegurarnos de que la animación no se repita indefinidamente */
+.option-display {
+    opacity: 1;
+}
+
+
+.instuction{
+    max-width: 500px;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.447), rgba(0, 0, 0, 0.129)), 
+                url('../Assets/sky.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+}
+
+footer{
+    color: white;
+}
